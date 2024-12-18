@@ -8,10 +8,8 @@ public static class CatalogModule
 {
     public static IServiceCollection AddCatalogModule(this IServiceCollection services, IConfiguration configuration)
     {
-        //services
-        //    .AddApplicationServices()
-        //    .AddInfrastructureServices(configuration)
-        //    .AddApiServices();
+        var connectionString = configuration.GetConnectionString("Database");
+        services.AddDbContext<CatalogDbContext>(options => options.UseNpgsql(connectionString));
 
         return services;
     }
