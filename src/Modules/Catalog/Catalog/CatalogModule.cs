@@ -11,16 +11,14 @@ public static class CatalogModule
         var connectionString = configuration.GetConnectionString("Database");
         services.AddDbContext<CatalogDbContext>(options => options.UseNpgsql(connectionString));
 
+        services.AddScoped<IDataSeeder, CatalogDataSeeder>();
+
         return services;
     }
 
     public static IApplicationBuilder UseCatalogModule(this IApplicationBuilder app)
     {
-        //app
-        //    .UseApplicationServices()
-        //    .UseInfrastructureServices()
-        //    .UseApiServices();
-
+        app.UseMigration<CatalogDbContext>();
         return app;
     }
 }
