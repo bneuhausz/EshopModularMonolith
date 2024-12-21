@@ -1,2 +1,2 @@
 # EshopModularMonolith
-learning modulith
+just coding along with some VSA learning material
