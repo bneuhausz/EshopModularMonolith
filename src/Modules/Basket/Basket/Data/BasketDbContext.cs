@@ -1,5 +1,5 @@
 ﻿namespace Basket.Data;
-internal class BasketDbContext : DbContext
+public class BasketDbContext : DbContext
 {
     public BasketDbContext(DbContextOptions<BasketDbContext> options) : base(options) { }
 
