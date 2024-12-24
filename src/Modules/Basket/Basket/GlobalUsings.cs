@@ -6,7 +6,7 @@ global using Basket.Basket.Models;
 global using Basket.Data;
 global using Microsoft.AspNetCore.Builder;
 global using Basket.Basket.Dtos;
-global using Shared.CQRS;
+global using Shared.Contracts.CQRS;
 global using FluentValidation;
 global using Shared.Exceptions;
 global using Catalog.Basket.Exceptions;
