@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Contracts", "Module
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Contracts", "Shared\Shared.Contracts\Shared.Contracts.csproj", "{DB85AF60-D095-4121-984C-BD6444D89E7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Messaging", "Shared\Shared.Messaging\Shared.Messaging.csproj", "{E26591DE-56F6-4EE8-ABBC-E46D036CF07A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Messaging", "Shared\Shared.Messaging\Shared.Messaging.csproj", "{E26591DE-56F6-4EE8-ABBC-E46D036CF07A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

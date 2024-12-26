@@ -1,5 +1,4 @@
 ﻿namespace Basket.Basket.Features.AddItemIntoBasket;
-
 public record AddItemIntoBasketRequest(string UserName, ShoppingCartItemDto ShoppingCartItem);
 
 public record AddItemIntoBasketResponse(Guid Id);
@@ -19,6 +18,7 @@ public class AddItemIntoBasketEndpoint
         .Produces<AddItemIntoBasketResponse>(StatusCodes.Status201Created)
         .ProducesProblem(StatusCodes.Status400BadRequest)
         .WithSummary("Add Item Into Basket")
-        .WithDescription("Add Item Into  Basket");
+        .WithDescription("Add Item Into  Basket")
+        .RequireAuthorization();
     }
 }

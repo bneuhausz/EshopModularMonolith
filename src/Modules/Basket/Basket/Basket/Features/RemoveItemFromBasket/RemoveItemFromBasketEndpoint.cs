@@ -1,5 +1,4 @@
 ﻿namespace Basket.Basket.Features.RemoveItemFromBasket;
-
 public record RemoveItemFromBasketResponse(Guid Id);
 
 public class RemoveItemFromBasketEndpoint
@@ -17,6 +16,7 @@ public class RemoveItemFromBasketEndpoint
         .Produces<RemoveItemFromBasketEndpoint>(StatusCodes.Status200OK)
         .ProducesProblem(StatusCodes.Status400BadRequest)
         .WithSummary("Remove Item From Basket")
-        .WithDescription("Remove Item From  Basket");
+        .WithDescription("Remove Item From  Basket")
+        .RequireAuthorization();
     }
 }

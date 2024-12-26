@@ -1,5 +1,4 @@
 ﻿namespace Basket.Basket.Features.GetBasket;
-
 public record GetBasketResponse(ShoppingCartDto ShoppingCart);
 
 public class GetBasketEndpoint
@@ -16,6 +15,7 @@ public class GetBasketEndpoint
         .Produces<GetBasketResponse>(StatusCodes.Status200OK)
         .ProducesProblem(StatusCodes.Status400BadRequest)
         .WithSummary("Get Basket")
-        .WithDescription("Get Basket");
+        .WithDescription("Get Basket")
+        .RequireAuthorization();
     }
 }
